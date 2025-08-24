@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />https://api-add-users.onrender.com/api/v1/users
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Carter+One&family=Luckiest+Guy&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&family=Carter+One&family=Ga+Maamli&family=Luckiest+Guy&family=Permanent+Marker&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <section class="nav-bar center">
+      <div class="container">
+        <ul>
+          <li class="item item-logo">Talbi</li>
+          <li class="item home">Home</li>
+          <li class="item profile" onclick="profileSectionBtn()">Profile</li>
+        </ul>
+        <div class="container-user horizental disabled"></div>
+        <div class="btns-loggin">
+          <div class="btn-loggin center" style="--clr: #4070f4">Login</div>
+          <div class="btn-register center" style="--clr: #8fd14f">Register</div>
+        </div>
+        <div
+          class="btn-logout horizental center disabled"
+          style="--clr: tomato"
+        >
+          Logout
+        </div>
+        <div class="btn-bars center">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+      </div>
+    </section>
+    <div class="btn-add-post center">
+      <i class="fa-solid fa-plus"></i>
+    </div>
+    <section class="profile disabled">
+    </section>
+    <div class="nav-bar-vertical">
+      <div class="content">
+        <div class="container-user"></div>
+        <ul>
+          <li class="item">Home</li>
+          <li class="item">Profile</li>
+        </ul>
+        <div class="btn-logout center" style="--clr: tomato">Logout</div>
+      </div>
+    </div>
+    <div class="posts-btns-pass">
+      <section class="posts disabled"></section>
+      <div class="btns-pass disabled">
+        <div class="btn-prv end-page">
+          <i class="fa-solid fa-angle-left"></i>
+          <div>Prev</div>
+        </div>
+        <div class="btn-next">
+          <div>Next</div>
+          <i class="fa-solid fa-angle-right"></i>
+        </div>
+      </div>
+    </div>
+    <div class="unique-post-with-comment"></div>
+    <!-- show a div when i clicked in the button -->
+   
+    <div class="loading center">loading</div>
+    <div class="login center disabled">
+      <div class="container-login">
+        <h1>Login</h1>
+        <hr />
+        <input type="text" placeholder="username" class="username-input" />
+        <input type="password" placeholder="password" class="password-input" />
+        <hr />
+        <div class="btn-content-login">
+          <div class="btns-login">
+            <div class="btn-close center" style="--clr: #666666">close</div>
+            <div class="btn-login center" style="--clr: #4070f4">login</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="register center disabled">
+      <div class="container-register">
+        <h1>Register</h1>
+        <hr />
+        <input type="text" placeholder="username" class="username-register" />
+        <input type="email" placeholder="email" class="email-register" />
+        <input
+          type="password"
+          placeholder="password"
+          class="password-register"
+        />
+        <input type="file" class="image-register" />
+        <hr />
+        <div class="btn-content-register">
+          <div class="btns-register">
+            <div class="btn-close-register center" style="--clr: #666666">
+              close
+            </div>
+            <div class="btn-registered center" style="--clr: #4070f4">
+              register
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="alert center" style="--clr: #8fd14f">
+      <div class="icon-remove"><i class="fa-solid fa-xmark"></i></div>
+      <div class="text"></div>
+    </div>
+    <div class="add-post center disabled">
+      <div class="container-post">
+        <h1>Creat New Post</h1>
+        <hr />
+        <input type="text" placeholder="title" class="title-post inp-write" />
+        <textarea name="" id="" class="body-post inp-write"></textarea>
+        <label for="">image post</label>
+        <input type="file" name="" id="" class="post-image" />
+        <hr />
+        <div class="btn-content-post">
+          <div class="btns-post">
+            <div class="btn-close-post center" style="--clr: #666666">
+              close
+            </div>
+            <div class="btn-post center" style="--clr: #4070f4">Posted</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="edit-post center disabled">
+      <div class="container-post">
+        <h1>Edit A Post</h1>
+        <hr />
+        <input type="text" placeholder="title" class="edit-title-post edit-inp-write" />
+        <textarea name="" id="" class="edit-body-post edit-inp-write"></textarea>
+        <label for="">image post</label>
+        <input type="file" name="" id="" class="edit-post-image" />
+        <hr />
+        <div class="btn-content-post">
+          <div class="btns-post">
+            <div class="edit-btn-close-post center" onclick="closeEditPost()" style="--clr: #666666">
+              close
+            </div>
+            <div class="edit-btn-post center" onclick="editPost()" style="--clr: #4070f4">Update</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-post-delated disabled">
+      <h1>Are You Sure ?</h1>
+      <div class="btns">
+        <div class="no center" style="--clr:tomato;" onclick="btnNO()">NO</div>
+        <div class="ok center" style="--clr:#4070f4" onclick="btnOk()">YES</div>
+      </div>
+    </div>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script> -->
+    <script src="script.js"></script>
+  </body>
+</html>
